@@ -38,6 +38,12 @@ namespace Business.Concrete
 			_carDal.Delete(car);
 			return new SuccessResult(Messages.CarDeleted);
 		}
+
+		public IDataResult<List<Car>> GetAllById(int id)
+		{
+			return new DataResult<List<Car>>(_carDal.GetAll(c => c.Id == id), true, Messages.CarsListedById);
+		}
+
 		public IResult Update(Car car)
 		{
 			_carDal.Update(car);

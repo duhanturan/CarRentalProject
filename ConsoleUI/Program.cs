@@ -2,6 +2,7 @@
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System;
 
 namespace ConsoleUI
@@ -10,21 +11,9 @@ namespace ConsoleUI
 	{
 		static void Main(string[] args)
 		{
-			BrandTest();
-		}
+			
 
-		private static void BrandTest()
-		{
-			BrandManager brandManager = new BrandManager(new EfBrandDal());
-
-			foreach (var brand in
-				brandManager.GetAll())
-			{
-				Console.WriteLine(brand.BrandName);
-			}
-		}
-
-	
+        }
 	}
 }
 
