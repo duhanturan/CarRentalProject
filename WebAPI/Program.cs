@@ -19,6 +19,8 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddSingleton<ICarService,CarManager>();
 //builder.Services.AddSingleton<ICarDal, EfCarDal>();
 
+
+
 var app = builder.Build();
 
 
